@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #1a1d20;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+}
+
+header .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+nav a.active, nav a:hover {
+    color: #000000;
+    font-weight: 500;
+}
+
+.hero {
+    background-color: #181920;
+    color: #ffffff;
+    margin: 2rem 8%;
+    padding: 3.5rem 2.5rem;
+    border-radius: 16px;
+}
+
+.hero .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.hero p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+}
+
+.btn-hero {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    margin: 0 8%;
+    flex: 1;
+}
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.catalog-header .section-tag {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6c757d;
+}
+
+.catalog-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.total-badge {
+    background-color: #f1f3f5;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #495057;
+    border: 1px solid #e9ecef;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.card-header-info {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #868e96;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.discount-text {
+    color: #495057;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+.price-container {
+    margin-bottom: 1.25rem;
+}
+
+.original-price {
+    font-size: 0.8rem;
+    color: #adb5bd;
+    text-decoration: line-through;
+    margin-bottom: 0.1rem;
+}
+
+.final-price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #111111;
+}
+
+.stock-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.status-badge {
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-badge.available {
+    background-color: #e6f4ea;
+    color: #1e7e34;
+}
+
+.status-badge.empty {
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.btn-buy {
+    width: 100%;
+    background-color: #181920;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-buy:hover:not(:disabled) {
+    background-color: #333542;
+}
+
+.btn-buy:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    cursor: not-allowed;
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 8%;
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    header, .hero, .container, footer {
+        margin-left: 4%;
+        margin-right: 4%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
